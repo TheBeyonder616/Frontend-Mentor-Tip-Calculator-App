@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A tip calculator app to help you calculate tip amounts and totals per person."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./script.js" defer></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>spli<span>tter</span></h1>
+    </header>
+    <main id="main">
+      <article class="tip-calculator-app">
+        <!-- FOR THE GRID -->
+        <section class="wrapper">
+          <section class="tip-calculator-app__bill">
+            <label for="bill">
+              <h2 class="heading-secondary">Bill</h2>
+              <input
+                type="number"
+                required
+                name="bill"
+                class="input dollar"
+                data-bill
+              />
+              <span class="error bill hide" data-errorBill> hhh </span>
+            </label>
+          </section>
+
+          <section class="tip-calculator-app__tip-selection">
+            <h2 class="heading-secondary">Select Tip %</h2>
+            <div class="grid">
+              <button class="btn" data-tip-Percentage>5%</button>
+              <button class="btn" data-tip-Percentage>10%</button>
+              <button class="btn" data-tip-Percentage>15%</button>
+              <button class="btn" data-tip-Percentage>25%</button>
+              <button class="btn" data-tip-Percentage>50%</button>
+              <input class="btn custom" data-tip-Custom type="number" />
+            </div>
+          </section>
+
+          <section class="tip-calculator-app__people-count">
+            <label for="count">
+              <h2 class="heading-secondary">Number of People</h2>
+              <input
+                type="number"
+                name="count"
+                class="input count"
+                data-count
+              />
+              <span class="error count hide" data-errorCount> hhh </span>
+            </label>
+          </section>
+        </section>
+
+        <section class="tip-calculator-app__tip-calculator">
+          <!-- TIP AMOUNT -->
+          <div class="wrapper">
+            <div>
+              <h2>
+                Tip Amount
+
+                <span>/ person</span>
+              </h2>
+              <h3 data-tipAmount>$4.27</h3>
+            </div>
+            <!-- TOTAL -->
+            <div>
+              <h2>
+                Total
+                <span>/ person Reset</span>
+              </h2>
+              <h3 data-total>$32.79</h3>
+            </div>
+          </div>
+          <!-- Container -->
+          <div>
+            <button class="btn reset" data-reset>reset</button>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
